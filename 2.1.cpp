@@ -24,64 +24,7 @@ int main() {
 		int count = 0;
 		int z=n;
 		int a = 1;
-	/*	while (a<z ) {
-			for (z; w[z] >= 50; z--) {
-				count++;
-			}
-			for (z; w[z] >=25; z--) {
-				count++;
-				a++;
-			}
-			for (z; w[z] >=17; z--) {
-				count++;
-				a += 2;
-			}
-			for (z; w[z] >=13; z--) {
-				count++;
-				a += 3;
-			}
-			for (z; w[z] >=10; z--) {
-				count++;
-				a += 4;
-			}
-			for (z; w[z] >=9; z--) {
-				count++;
-				a += 5;
-			}
-			for (z; w[z] >=8; z--) {
-				count++;
-				a += 6;
-			}
-			for (z; w[z] >=7; z--) {
-				count++;
-				a += 7;
-			}
-			for (z; w[z] >=6; z--) {
-				count++;
-				a += 8;
-			}
-			for (z; w[z] >=5; z--) {
-				count++;
-				a += 9;
-			}
-			for (z; w[z] >=4; z--) {
-				count++;
-				a += 12;
-			}
-			for (z; w[z] >=3; z--) {
-				count++;
-				a += 16;
-			}
-			for (z; w[z] >=2; z--) {
-				count++;
-				a += 24;
-			}
-			for (z; w[z] >=1; z--) {
-				count++;
-				a += 49;
-			}
-		}*/
-		while (a < z) {
+		while (a <= z) { //counting should end when everything was counted
 			if (w[z] >= 50) {
 				z--;
 				count++;
@@ -151,13 +94,15 @@ int main() {
 				a += 49;
 				count++;
 			}
+			if(z+1<a){ //when counting ends, check whether or not it exceeded the n
+			    count--;
+			}
 
 
 		}
 
 		printf("Case #%d: %d\n",i, count);
-		fprintf(fp, "Case #%d: %d\n",i, count);
-		
+		fprintf(fp, "Case #%d: %d\n",i, count);		
 	}
 
 
